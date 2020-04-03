@@ -15,3 +15,44 @@ int main()
     scanf("%lf", &arrivalTime[i] );
     process[i]=i+1;
   }
+  printf("\n\n\t\t\t -------------- Entered Values are --------------\n\n");
+  printf("\t\t\t---------------------------------------\n");
+  printf("\t\t\t| Process | Arrival Time | Burst Time |\n");
+  printf("\t\t\t---------------------------------------\n");
+  for(i=0;i<n;i++)
+  {
+    printf("\t\t\t|  P[%0.0lf]   |       %0.0lf      |     %0.0lf      |\n",process[i],arrivalTime[i],burstTime[i]);
+  }
+    printf("\t\t\t---------------------------------------\n");
+  printf("\n\n\t\t\t-------- Sorting Processes according to Arrivaltime --------\n");
+  for(i=0;i<n;i++)
+  {
+    for(j=0;j<n;j++)
+    {
+      if(arrivalTime[i]<arrivalTime[j])
+      {
+        
+        temp = burstTime[j];
+        burstTime[j] = burstTime[i];
+        burstTime [i] = temp;
+	
+	      temp = process[j];
+        process[j] = process[i];
+        process[i] = temp;
+
+	      temp = arrivalTime[j];
+        arrivalTime[j] = arrivalTime[i];
+        arrivalTime[i] = temp;
+      
+      }
+    }
+  }
+  printf("\n\n\t\t\t -------------- Now Values are --------------\n\n");
+  printf("\t\t\t---------------------------------------\n");
+  printf("\t\t\t| Process | Arrival Time | Burst Time |\n");
+  printf("\t\t\t---------------------------------------\n");
+  for(i=0;i<n;i++)
+  {
+    printf("\t\t\t|  P[%0.0lf]   |       %0.0lf      |     %0.0lf      |\n",process[i],arrivalTime[i],burstTime[i]);
+  }
+    printf("\t\t\t---------------------------------------\n");
