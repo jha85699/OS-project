@@ -75,3 +75,9 @@ printf("\n\n\t\t\t -------------- Final Values are --------------\n\n");
   {
     printf("\t\t\t|  P[%0.0lf]   |       %0.0lf      |     %0.0lf      |        %0.0lf       |         %0.0lf          |\n",process[i],arrivalTime[i],burstTime[i],waitingTime[i],turnaroundTime[i]);
   }
+printf("\t\t\t-----------------------------------------------------------------------------\n");
+  printf("\n\n\n\t\t\tAverage Turn Around Time : %lf",turnaround_avg);
+  printf("\n\t\t\tAverage Waiting Time     : %lf\n\n",wait_avg);
+  getch();
+  return 0;
+}
